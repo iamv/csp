@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CustomCSP", "CustomCSP\CustomCSP.vcxproj", "{6437FAD8-B74E-4312-AD1E-2BA78B745198}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CSPTest", "CSPTest\CSPTest.vcxproj", "{0A25DF1C-E7F4-4628-B51A-13A7F6357A2C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6437FAD8-B74E-4312-AD1E-2BA78B745198}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6437FAD8-B74E-4312-AD1E-2BA78B745198}.Debug|Win32.Build.0 = Debug|Win32
+		{6437FAD8-B74E-4312-AD1E-2BA78B745198}.Release|Win32.ActiveCfg = Release|Win32
+		{6437FAD8-B74E-4312-AD1E-2BA78B745198}.Release|Win32.Build.0 = Release|Win32
+		{0A25DF1C-E7F4-4628-B51A-13A7F6357A2C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0A25DF1C-E7F4-4628-B51A-13A7F6357A2C}.Debug|Win32.Build.0 = Debug|Win32
+		{0A25DF1C-E7F4-4628-B51A-13A7F6357A2C}.Release|Win32.ActiveCfg = Release|Win32
+		{0A25DF1C-E7F4-4628-B51A-13A7F6357A2C}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Hashes">
+      <UniqueIdentifier>{234617df-8d98-4a2b-b225-5881c5017a91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KeyStorage">
+      <UniqueIdentifier>{a391ef85-418d-4f90-866c-db09d96f3170}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cipher">
+      <UniqueIdentifier>{a6b9314f-7360-4c01-a17a-f5e0d17f9087}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="csp.def">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Storage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CSPException.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="csp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Blob.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Provider.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Test.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HashMD5.h">
+      <Filter>Hashes</Filter>
+    </ClInclude>
+    <ClInclude Include="Buffer.h">
+      <Filter>Hashes</Filter>
+    </ClInclude>
+    <ClInclude Include="FileKeyStorage.h">
+      <Filter>KeyStorage</Filter>
+    </ClInclude>
+    <ClInclude Include="Enumerator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RC4.h">
+      <Filter>Cipher</Filter>
+    </ClInclude>
+    <ClInclude Include="Encrypted.h">
+      <Filter>Cipher</Filter>
+    </ClInclude>
+    <ClInclude Include="CryptoFabric.h">
+      <Filter>Cipher</Filter>
+    </ClInclude>
+    <ClInclude Include="Key.h">
+      <Filter>Cipher</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyProperty.h">
+      <Filter>Cipher</Filter>
+    </ClInclude>
+    <ClInclude Include="ProviderInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ProviderParamsCornverter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Alg.h">
+      <Filter>Cipher</Filter>
+    </ClInclude>
+    <ClInclude Include="ExchAlg.h">
+      <Filter>Cipher</Filter>
+    </ClInclude>
+    <ClInclude Include="SignAlg.h">
+      <Filter>Cipher</Filter>
+    </ClInclude>
+    <ClInclude Include="Hash.h">
+      <Filter>Cipher</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomCSP.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="csp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Provider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Hash.cpp">
+      <Filter>Hashes</Filter>
+    </ClCompile>
+    <ClCompile Include="HashMD5.cpp">
+      <Filter>Hashes</Filter>
+    </ClCompile>
+    <ClCompile Include="Buffer.cpp">
+      <Filter>Hashes</Filter>
+    </ClCompile>
+    <ClCompile Include="FileKeyStorage.cpp">
+      <Filter>KeyStorage</Filter>
+    </ClCompile>
+    <ClCompile Include="RC4.cpp">
+      <Filter>Cipher</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
