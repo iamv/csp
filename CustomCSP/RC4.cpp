@@ -1,7 +1,6 @@
 #include "stdafx.h"
 #include <iostream>
 #include "RC4.h"
-#include "HashMD5.h"
 #include "Encrypted.h"
 
 class RC4Key;
@@ -90,13 +89,7 @@ RC4Key::RC4Key(bool isExport)
 	m_exportable = isExport;
 	DWORD size = 16;
 	(void)size; //BUG FIX in VS2010 'size' : local variable is initialized but not referenced
-	m_value.resize(16);
-	DWORD time = timeGetTime();
-	HashMD5 hash;
-	hash.AddData((BYTE*)&time, sizeof(time));
-	std::vector<BYTE> hashVal(hash.GetHashSize());
-	hash.GetHashValue(&hashVal[0], hashVal.size());
-	std::_Copy_impl(hashVal.begin(), hashVal.end(), m_value.begin());		
+	m_value.resize(16);		
 }
 RC4Key::RC4Key(const BYTE* value, DWORD len, bool isExport)
 {

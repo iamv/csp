@@ -4,7 +4,6 @@
 #include "Provider.h"
 #include "ProviderInfo.h"
 #include "CryptoFabric.h"
-#include "Hash.h"
 
 template<class T>
 class KeyProperty
@@ -573,109 +572,109 @@ KeyProperty<Provider>* CreateProvProperty(DWORD param, Provider* prov, DWORD fla
 	throw ::NteBadType();
 }
 
-class HashSize : public KeyProperty<Hash>
-{
-	public: 
-	HashSize(Hash *hash): KeyProperty(hash)
-	{
-	}
-	DWORD GetSize()
-	{
-		return sizeof(m_key->GetHashSize());
-	}
-	void GetProperty(BYTE* data, DWORD size)
-	{
-		if(size<GetSize())
-			throw ::ErrorMoreData();
-
-		DWORD hashSize = m_key->GetHashSize();
-		std::_Copy_impl((BYTE*)&hashSize, (BYTE*)&hashSize+GetSize(), &data[0]);
-	}
-	void SetProperty(BYTE*)
-	{
-		throw ::NteNoSupported();
-	}
-};
-
-class HashValue : public KeyProperty<Hash>
-{
-	public: 
-	HashValue(Hash *hash): KeyProperty(hash)
-	{
-	}
-	DWORD GetSize()
-	{
-		return m_key->GetHashSize();
-	}
-	void GetProperty(BYTE* data, DWORD size)
-	{
-		if(size<GetSize())
-			throw ::ErrorMoreData();
-
-		m_key->GetHashValue(data, size);
-	}
-	void SetProperty(BYTE* data)
-	{
-		UNREFERENCED_PARAMETER(data);
-		throw ::NteNoSupported();
-	}
-};
-
-class HashId : public KeyProperty<Hash>
-{ 
-public: 
-	HashId(Hash *hash): KeyProperty(hash)
-	{
-	}
-	DWORD GetSize()
-	{
-		return sizeof(ALG_ID);
-	}
-	void GetProperty(BYTE* data, DWORD size)
-	{
-		if(size<GetSize())
-			throw ::ErrorMoreData();
-
-		ALG_ID alg = m_key->GetId();
-		std::_Copy_impl((BYTE*)&alg, (BYTE*)&alg+GetSize(), &data[0]);
-	}
-	void SetProperty(BYTE*)
-	{
-		throw ::NteNoSupported();
-	}
-};
-
-class HmacInfo: public KeyProperty<Hash>
-{
-	public: 
-	HmacInfo(Hash *hash): KeyProperty(hash)
-	{
-	}
-	DWORD GetSize()
-	{
-		throw ::NteNoSupported();
-		
-	}
-	void GetProperty(BYTE* data, DWORD size)
-	{
-		UNREFERENCED_PARAMETER(data);
-		UNREFERENCED_PARAMETER(size);
-		throw ::NteNoSupported();
-	}
-	void SetProperty(BYTE*)
-	{
-		throw ::NteNoSupported();
-	}
-};
-
-KeyProperty<Hash>* CreateHashProperty(DWORD param, Hash* hash)
-{
-	switch(param)
-	{
-		case HP_HASHVAL:	return new HashValue(hash); break;
-		case HP_HASHSIZE:	return new HashSize(hash); break;
-		case HP_ALGID:		return new HashId(hash); break;
-		case HP_HMAC_INFO:	return new HmacInfo(hash); break;
-	}
-	throw ::NteBadType();
-}
+//class HashSize : public KeyProperty<Hash>
+//{
+//	public: 
+//	HashSize(Hash *hash): KeyProperty(hash)
+//	{
+//	}
+//	DWORD GetSize()
+//	{
+//		return sizeof(m_key->GetHashSize());
+//	}
+//	void GetProperty(BYTE* data, DWORD size)
+//	{
+//		if(size<GetSize())
+//			throw ::ErrorMoreData();
+//
+//		DWORD hashSize = m_key->GetHashSize();
+//		std::_Copy_impl((BYTE*)&hashSize, (BYTE*)&hashSize+GetSize(), &data[0]);
+//	}
+//	void SetProperty(BYTE*)
+//	{
+//		throw ::NteNoSupported();
+//	}
+//};
+//
+//class HashValue : public KeyProperty<Hash>
+//{
+//	public: 
+//	HashValue(Hash *hash): KeyProperty(hash)
+//	{
+//	}
+//	DWORD GetSize()
+//	{
+//		return m_key->GetHashSize();
+//	}
+//	void GetProperty(BYTE* data, DWORD size)
+//	{
+//		if(size<GetSize())
+//			throw ::ErrorMoreData();
+//
+//		m_key->GetHashValue(data, size);
+//	}
+//	void SetProperty(BYTE* data)
+//	{
+//		UNREFERENCED_PARAMETER(data);
+//		throw ::NteNoSupported();
+//	}
+//};
+//
+//class HashId : public KeyProperty<Hash>
+//{ 
+//public: 
+//	HashId(Hash *hash): KeyProperty(hash)
+//	{
+//	}
+//	DWORD GetSize()
+//	{
+//		return sizeof(ALG_ID);
+//	}
+//	void GetProperty(BYTE* data, DWORD size)
+//	{
+//		if(size<GetSize())
+//			throw ::ErrorMoreData();
+//
+//		ALG_ID alg = m_key->GetId();
+//		std::_Copy_impl((BYTE*)&alg, (BYTE*)&alg+GetSize(), &data[0]);
+//	}
+//	void SetProperty(BYTE*)
+//	{
+//		throw ::NteNoSupported();
+//	}
+//};
+//
+//class HmacInfo: public KeyProperty<Hash>
+//{
+//	public: 
+//	HmacInfo(Hash *hash): KeyProperty(hash)
+//	{
+//	}
+//	DWORD GetSize()
+//	{
+//		throw ::NteNoSupported();
+//		
+//	}
+//	void GetProperty(BYTE* data, DWORD size)
+//	{
+//		UNREFERENCED_PARAMETER(data);
+//		UNREFERENCED_PARAMETER(size);
+//		throw ::NteNoSupported();
+//	}
+//	void SetProperty(BYTE*)
+//	{
+//		throw ::NteNoSupported();
+//	}
+//};
+//
+//KeyProperty<Hash>* CreateHashProperty(DWORD param, Hash* hash)
+//{
+//	switch(param)
+//	{
+//		case HP_HASHVAL:	return new HashValue(hash); break;
+//		case HP_HASHSIZE:	return new HashSize(hash); break;
+//		case HP_ALGID:		return new HashId(hash); break;
+//		case HP_HMAC_INFO:	return new HmacInfo(hash); break;
+//	}
+//	throw ::NteBadType();
+//}

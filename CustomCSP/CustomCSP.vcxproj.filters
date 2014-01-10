@@ -57,12 +57,6 @@
     <ClInclude Include="Test.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="HashMD5.h">
-      <Filter>Hashes</Filter>
-    </ClInclude>
-    <ClInclude Include="Buffer.h">
-      <Filter>Hashes</Filter>
-    </ClInclude>
     <ClInclude Include="FileKeyStorage.h">
       <Filter>KeyStorage</Filter>
     </ClInclude>
@@ -99,9 +93,6 @@
     <ClInclude Include="SignAlg.h">
       <Filter>Cipher</Filter>
     </ClInclude>
-    <ClInclude Include="Hash.h">
-      <Filter>Cipher</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -118,15 +109,6 @@
     </ClCompile>
     <ClCompile Include="Provider.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Hash.cpp">
-      <Filter>Hashes</Filter>
-    </ClCompile>
-    <ClCompile Include="HashMD5.cpp">
-      <Filter>Hashes</Filter>
-    </ClCompile>
-    <ClCompile Include="Buffer.cpp">
-      <Filter>Hashes</Filter>
     </ClCompile>
     <ClCompile Include="FileKeyStorage.cpp">
       <Filter>KeyStorage</Filter>

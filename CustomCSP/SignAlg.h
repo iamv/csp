@@ -1,7 +1,7 @@
 #pragma once
 #include "Alg.h"
-#include "Hash.h"
 
+class Hash;
 class SignAlg: public IAlg
 {
 public:

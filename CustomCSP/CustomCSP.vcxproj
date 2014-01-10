@@ -82,7 +82,6 @@
   <ItemGroup>
     <ClInclude Include="Alg.h" />
     <ClInclude Include="Blob.h" />
-    <ClInclude Include="Buffer.h" />
     <ClInclude Include="common.h" />
     <ClInclude Include="CryptoFabric.h" />
     <ClInclude Include="csp.h" />
@@ -90,8 +89,6 @@
     <ClInclude Include="Encrypted.h" />
     <ClInclude Include="Enumerator.h" />
     <ClInclude Include="ExchAlg.h" />
-    <ClInclude Include="Hash.h" />
-    <ClInclude Include="HashMD5.h" />
     <ClInclude Include="Key.h" />
     <ClInclude Include="FileKeyStorage.h" />
     <ClInclude Include="KeyProperty.h" />
@@ -106,11 +103,8 @@
     <ClInclude Include="Test.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Buffer.cpp" />
     <ClCompile Include="csp.cpp" />
     <ClCompile Include="CustomCSP.cpp" />
-    <ClCompile Include="Hash.cpp" />
-    <ClCompile Include="HashMD5.cpp" />
     <ClCompile Include="FileKeyStorage.cpp" />
     <ClCompile Include="Provider.cpp" />
     <ClCompile Include="RC4.cpp" />

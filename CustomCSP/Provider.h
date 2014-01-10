@@ -11,7 +11,6 @@
 #include "CryptoFabric.h"
 
 //#include "Key.h"
-#include "Hash.h"
 #include "Blob.h"
 #include "Enumerator.h"
 #include "ProviderParamsCornverter.h"

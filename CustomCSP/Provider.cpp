@@ -1,6 +1,5 @@
 #include "stdafx.h"
 #include "Provider.h"
-#include "HashMD5.h"
 #include "RC4.h"
 #include "CryptoFabric.h"
 #include "ProviderParamsCornverter.h"
@@ -289,18 +288,6 @@ Key* Provider::GetPermanentKey(bool signature)
 //Random
 void Provider::GenRandom(BYTE* data, DWORD size)
 {
-	BYTE* position = data;
-	(void)position; //Bug Fix Warning warning C4189: 'position' : local variable is initialized but not referenced
-	DWORD time = timeGetTime();
-	std::shared_ptr<Hash> hash(new HashMD5);
-	hash->AddData((BYTE*)&time, sizeof(time));
-	std::vector<BYTE> hashVal(hash->GetHashSize());
-	hash->GetHashValue(&hashVal[0], hashVal.size());
-	std::shared_ptr<RC4Key> key(new RC4Key(&hashVal[0], hashVal.size())); 
-	std::shared_ptr<PRNGRC4> prng(new PRNGRC4(key.get()));
-		
-	for(DWORD i=0; i < size; ++i)
-		data[i] = prng->GetNextValue();
 		//TODO: переписать на фортуну
 }
 

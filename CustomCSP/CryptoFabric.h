@@ -1,6 +1,5 @@
 #pragma once
-#include "Hash.h"
-#include "HashMD5.h"
+
 #include "Key.h"
 #include "Encrypted.h"
 #include "RC4.h"
@@ -19,8 +18,6 @@ public:
 	{
 		switch(id)
 		{
-			case CALG_MD5: return new HashMD5(); 
-				break;
 			default: throw ::NteBadAlgID(); 
 				break;
 		}
@@ -30,8 +27,6 @@ public:
 		UNREFERENCED_PARAMETER(key);
 		switch(id)
 		{
-			case CALG_MD5: return new HashMD5(); 
-				break;
 			default: throw ::NteBadAlgID(); 
 				break;
 		}
